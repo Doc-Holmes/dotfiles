@@ -228,18 +228,24 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-#bar {
-#    position top
+bar {
+    swaybar_command waybar
+}
+
 #
-#    # When the status_command prints a new line to stdout, swaybar updates.
-#    # The default just shows the current date and time.
-#    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+# Border customization
 #
-#    colors {
-#        statusline #ffffff
-#        background #323232
-#        inactive_workspace #32323200 #32323200 #5c5c5c
-#    }
-#}
+client.focused #000000 #7b0909 #ffffff
+client.unfocused #312727 #412727 #ffffff
+client.focused_inactive #412727 #312727 #ffffff
+
+hide_edge_borders both
+titlebar_border_thickness 0
+
+
+#
+# Mouse stuff
+#
+mouse_warping none
 
 include /etc/sway/config.d/*

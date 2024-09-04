@@ -1,7 +1,8 @@
 {
     "layer": "top",
     "position": "top",
-    "modules-left": ["custom/media"],
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["custom/media"],
     "modules-right": ["network", "battery", "pulseaudio", "clock", "custom/quit"],
     "clock": {
         "format": "{:%H:%M}",

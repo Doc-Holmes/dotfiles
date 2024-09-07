@@ -3,7 +3,7 @@
     "position": "top",
     "modules-left": ["sway/workspaces"],
     "modules-center": ["custom/media"],
-    "modules-right": ["network", "pulseaudio", "clock", "custom/quit"],
+    "modules-right": ["tray", "network", "pulseaudio", "clock", "custom/quit"],
     "clock": {
         "format": "{:%H:%M}",
         "format-alt": "{:%a %b %d}",

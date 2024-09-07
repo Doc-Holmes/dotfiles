@@ -9,6 +9,7 @@
         "format-alt": "{:%a %b %d}",
         "tooltip": false
     },
+
     "battery": {
         "states": {
             "good": 95,
@@ -22,23 +23,26 @@
         "format-alt": "{icon} {time}",
         "format-icons": ["", "", "", "", ""]
     },
+
     "network": {
         "format": "{ifname}",
         "format-wifi": " {essid}",
-        "format-ethernet": " {ifname}",
+        "format-ethernet": "{ifname}",
         "format-disconnected": "",
         "tooltip-format-wifi": "{signalStrength}%",
         "max-length": 20
     },
+
     "custom/media": {
         "format": "{}",
         "interval": 1,
         "exec": "$HOME/.config/waybar/get_media.sh"
     },
+
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-bluetooth": "{icon} {volume}%",
-        "format-muted": "",
+        "format-muted": "🔇 {format_source}",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -46,11 +50,11 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", ""]
+            "default": ["", "", ""]
         },
-        "scroll-step": 1,
-        "on-click": "pavucontrol"
+        "on-click": "konsole -e pulsemixer",
     },
+
     "custom/quit": {
         "format": "",
         "on-click": "swaynag -f 'Terminus (TTF)'  -t warning -m 'Do you really want to exit sway?' -b 'Yes, exit sway' 'swaymsg exit'"

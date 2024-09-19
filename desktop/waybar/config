@@ -1,5 +1,5 @@
 {
-    "layer": "top",
+    "layer": "bottom",
     "position": "top",
     "modules-left": ["sway/workspaces"],
     "modules-center": ["custom/media"],
@@ -9,23 +9,6 @@
         "format-alt": "{:%a %b %d}",
         "tooltip": false
     },
-
-    // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
 
     "keyboard-state": {
         "numlock": true,
@@ -85,7 +68,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "konsole -e pulsemixer",
+        "on-click": "pavucontrol",
 				"tooltip": false
     },
 

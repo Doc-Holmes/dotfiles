@@ -229,11 +229,21 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 #
+# Screenshots
+#
+bindsym $mod+Shift+P exec grim -g "$(slurp)" - | wl-copy
+
+#
 # Window rules
 #
 for_window [app_id="pavucontrol"] floating enabled
 for_window [app_id="telegram-desktop"] floating enabled
 
+#
+# Commands
+#
+## Autotiling ## Currently not used. Breaks switching to tabbed layout
+#exec_always autotiling -l 2
 
 #
 # Status Bar:

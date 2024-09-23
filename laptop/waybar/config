@@ -3,11 +3,31 @@
     "position": "top",
     "modules-left": ["sway/workspaces"],
     "modules-center": ["custom/media"],
-    "modules-right": ["network", "battery", "pulseaudio", "clock", "custom/quit"],
+    "modules-right": ["tray", "network", "battery", "pulseaudio", "clock", "custom/quit"],
     "clock": {
-        "format": "{:%H:%M}",
-        "format-alt": "{:%a %b %d}",
-        "tooltip": false
+      "format": "{:%H:%M}  ",
+      "format-alt": "{:%A, %B %d, %Y (%R)}  ",
+      "tooltip-format": "<tt><small>{calendar}</small></tt>",
+      "calendar": {
+                  "mode"          : "year",
+                  "mode-mon-col"  : 3,
+                  "weeks-pos"     : "right",
+                  "on-scroll"     : 1,
+                  "format": {
+                            "months":     "<span color='#ffead3'><b>{}</b></span>",
+                            "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                            "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                            "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                            "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                            }
+                  },
+      "actions":  {
+                  "on-click-right": "mode",
+                  "on-scroll-up": "tz_up",
+                  "on-scroll-down": "tz_down",
+                  "on-scroll-up": "shift_up",
+                  "on-scroll-down": "shift_down"
+                  }
     },
 
     "battery": {
@@ -57,6 +77,6 @@
 
     "custom/quit": {
         "format": "",
-        "on-click": "swaynag -f 'Terminus (TTF)'  -t warning -m 'Do you really want to exit sway?' -b 'Yes, exit sway' 'swaymsg exit'"
+        "on-click": "swaynag -f 'Terminus (TTF)'  -t warning -m 'Do you really want to exit sway?' -b 'Yes, exit sway' 'swaymsg exit' -b 'Shutdown system' 'shutdown now'"
     }
 }

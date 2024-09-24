@@ -246,6 +246,20 @@ bindsym XF86MonBrightnessDown exec brightnessctl set -5%
 for_window [app_id="telegram-desktop"] floating enabled
 
 #
+# Screenshots
+#
+bindsym $mod+Shift+P exec grim -g "$(slurp)" - | wl-copy
+
+
+#
+# Touchpad gestures
+#
+#bindgesture [--exact] [--input-device=<device>] [--no-warn] <gesture>[:<fingers>][:directions] <command>
+bindgesture swipe:3:right workspace next
+bindgesture swipe:3:left workspace prev
+
+
+#
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.

@@ -1,13 +1,29 @@
 {
-    "layer": "top",
+    "layer": "bottom",
     "position": "top",
     "modules-left": ["sway/workspaces"],
     "modules-center": ["custom/media"],
-    "modules-right": ["network", "battery", "pulseaudio", "clock", "custom/quit"],
+    "modules-right": ["tray", "network", "battery", "pulseaudio", "clock", "custom/quit"],
     "clock": {
-        "format": "{:%H:%M}",
-        "format-alt": "{:%a %b %d}",
-        "tooltip": false
+      "format": "{:%Y-%m-%d    %H:%M} ",
+      "tooltip-format": "<tt><small>{calendar}</small></tt>",
+      "calendar": {
+                  "mode"          : "month",
+                  "mode-mon-col"  : 3,
+                  "weeks-pos"     : "right",
+                  "on-scroll"     : 1,
+                  "locale"        : "de_AT.UTF-8",
+                  "format": {
+                            "months":     "<span color='#ffead3'><b>{}</b></span>",
+                            "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                            "weeks":      "<span color='#99ffdd'><b>{}</b></span>",
+                            "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                            "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                            }
+                  },
+      "actions":  {
+                  "on-click-right": "mode",
+                  }
     },
 
     "battery": {
@@ -21,7 +37,9 @@
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{icon} {time}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "on-scroll-up": "brightnessctl set 1%-",
+        "on-scroll-down": "brightnessctl set +1%"
     },
 
     "network": {
@@ -57,6 +75,6 @@
 
     "custom/quit": {
         "format": "",
-        "on-click": "swaynag -f 'Terminus (TTF)'  -t warning -m 'Do you really want to exit sway?' -b 'Yes, exit sway' 'swaymsg exit'"
+        "on-click": "swaynag -f 'Terminus (TTF)'  -t warning -m 'Do you really want to exit sway?' -b 'Yes, exit sway' 'swaymsg exit' -b 'Shutdown system' 'shutdown now'"
     }
 }

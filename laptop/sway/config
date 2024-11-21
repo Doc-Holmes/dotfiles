@@ -247,12 +247,6 @@ for_window [app_id="telegram-desktop"] floating enabled
 for_window [app_id="nm-connection-editor"] floating enabled
 
 #
-# Screenshots
-#
-bindsym $mod+Shift+P exec grim -g "$(slurp)" - | wl-copy
-
-
-#
 # Touchpad gestures
 #
 #bindgesture [--exact] [--input-device=<device>] [--no-warn] <gesture>[:<fingers>][:directions] <command>

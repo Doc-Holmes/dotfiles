@@ -80,14 +80,30 @@ else
 	-- Minimal number of screen lines to keep above and below the cursor.
 	vim.opt.scrolloff = 10
 
+<<<<<<< Updated upstream
 	-- [[ Basic Keymaps ]]
 	--  See `:help vim.keymap.set()`
+=======
+-- [[ Style ]]
+-- Make background transparent
+vim.cmd([[
+  augroup TransparentBackground
+    autocmd!
+    autocmd ColorScheme * highlight Normal cterm=NONE guibg=NONE
+    autocmd ColorScheme * highlight NonText cterm=NONE guibg=NONE
+  augroup END
+]])
+
+-- [[ Basic Keymaps ]]
+--  See `:help vim.keymap.set()`
+>>>>>>> Stashed changes
 
 	-- Personal keymaps
 	-- Map for nvim-tree
 	vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "nvimtree toggle window" })
 	vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "nvimtree focus window" })
 
+<<<<<<< Updated upstream
 	-- Use tab and shift tab to switch buffer
 	vim.keymap.set("n", "<tab>", "<cmd>bn<CR>")
 	vim.keymap.set("n", "<S-tab>", "<cmd>bp<CR>")
@@ -95,6 +111,11 @@ else
 	-- Clear highlights on search when pressing <Esc> in normal mode
 	--  See `:help hlsearch`
 	vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+=======
+-- Use tab and shift tab to switch buffer
+vim.keymap.set("n", "<tab>", "<cmd>bn<CR>")
+vim.keymap.set("n", "<S-tab>", "<cmd>bp<CR>")
+>>>>>>> Stashed changes
 
 	-- Diagnostic keymaps
 	vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
@@ -110,6 +131,7 @@ else
 	-- [[ Basic Autocommands ]]
 	--  See `:help lua-guide-autocommands`
 
+<<<<<<< Updated upstream
 	-- Highlight when yanking (copying) text
 	--  Try it with `yap` in normal mode
 	--  See `:help vim.highlight.on_yank()`
@@ -120,6 +142,15 @@ else
 			vim.highlight.on_yank()
 		end,
 	})
+=======
+-- Set indent to 4 spaces
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
+-- [[ Basic Autocommands ]]
+--  See `:help lua-guide-autocommands`
+>>>>>>> Stashed changes
 
 	-- [[ Install `lazy.nvim` plugin manager ]]
 	--    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info

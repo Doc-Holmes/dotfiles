@@ -10,10 +10,6 @@ if vim.g.vscode then
 
 -- Config for regular nvim
 else
-  
-  -- Include the plugin config
-  require("config.lazy")
-
 	-- Set <space> as the leader key
 	-- See `:help mapleader`
 	--  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -47,6 +43,11 @@ else
 	--vim.schedule(function()
 	--	vim.opt.clipboard = "unnamedplus"
 	--end)
+
+	-- Set tabs to 4 spaces
+	vim.opt.tabstop = 4
+	vim.opt.shiftwidth = 4
+	vim.opt.expandtab = true
 
 	-- Enable break indent
 	vim.opt.breakindent = true
@@ -130,4 +131,7 @@ else
 
 	-- The line beneath this is called `modeline`. See `:help modeline`
 	-- vim: ts=2 sts=2 sw=2 et
+
+  -- Include the plugin config
+  require("config.lazy")
 end

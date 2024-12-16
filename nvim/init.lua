@@ -115,6 +115,16 @@ else
 	-- or just use <C-\><C-n> to exit terminal mode
 	vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
+  -- [[ Style ]]
+  -- Make background transparent
+  vim.cmd([[
+    augroup TransparentBackground
+      autocmd!
+      autocmd ColorScheme * highlight Normal cterm=NONE guibg=NONE
+      autocmd ColorScheme * highlight NonText cterm=NONE guibg=NONE
+    augroup END
+  ]])
+
 	-- [[ Basic Autocommands ]]
 	--  See `:help lua-guide-autocommands`
 

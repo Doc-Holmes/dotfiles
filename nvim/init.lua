@@ -52,7 +52,7 @@ else
 	vim.opt.smartcase = true
 
 	-- Keep signcolumn on by default
-	vim.opt.signcolumn = "yes"
+	--	vim.opt.signcolumn = "yes"
 
 	-- Decrease update time
 	vim.opt.updatetime = 250
@@ -80,9 +80,9 @@ else
 	-- Minimal number of screen lines to keep above and below the cursor.
 	vim.opt.scrolloff = 10
 
--- [[ Style ]]
--- Make background transparent
-vim.cmd([[
+	-- [[ Style ]]
+	-- Make background transparent
+	vim.cmd([[
   augroup TransparentBackground
     autocmd!
     autocmd ColorScheme * highlight Normal cterm=NONE guibg=NONE
@@ -90,8 +90,8 @@ vim.cmd([[
   augroup END
 ]])
 
--- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
+	-- [[ Basic Keymaps ]]
+	--  See `:help vim.keymap.set()`
 
 	-- Personal keymaps
 	-- Map for nvim-tree
@@ -131,10 +131,10 @@ vim.cmd([[
 		end,
 	})
 
-  -- Set indent to 4 spaces
-  vim.opt.tabstop = 4
-  vim.opt.shiftwidth = 4
-  vim.opt.expandtab = true
+	-- Set indent to 4 spaces
+	vim.opt.tabstop = 4
+	vim.opt.shiftwidth = 4
+	vim.opt.expandtab = true
 
 	-- [[ Install `lazy.nvim` plugin manager ]]
 	--    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info

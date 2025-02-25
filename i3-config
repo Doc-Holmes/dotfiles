@@ -37,11 +37,14 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Set Keyboard layout
-exec "setxkbmap -layout de"
+exec "setxkbmap -layout de -variant nodeadkeys"
 
 # Set background color
 #exec "xsetroot -solid '#333333'"
 exec "xsetroot -solid '#800813'"
+
+# Set binding for lockscreen
+bindsym $mod+Alt+l exec "i3lock --color 493779"
 
 # Set bindings for scratchpad
 # Make the currently focused window a scratchpad

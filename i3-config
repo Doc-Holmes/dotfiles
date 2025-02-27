@@ -37,14 +37,19 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Set Keyboard layout
-exec "setxkbmap -layout de -variant nodeadkeys"
+exec always --no-startup-id /bin/setxkbmap -layout de -nodeadkeys
+
+# Application keybindings
+bindsym $mod+b exec firefox
+bindsym $mod+Return exec alacritty
+
 
 # Set background color
 #exec "xsetroot -solid '#333333'"
 exec "xsetroot -solid '#800813'"
 
 # Set binding for lockscreen
-bindsym $mod+Alt+l exec "i3lock --color 493779"
+bindsym $mod+Mod1+l exec "i3lock --color 493779"
 
 # Set bindings for scratchpad
 # Make the currently focused window a scratchpad
@@ -66,9 +71,6 @@ floating_modifier $mod
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
-
-# start a terminal
-bindsym $mod+Return exec konsole #i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+q kill

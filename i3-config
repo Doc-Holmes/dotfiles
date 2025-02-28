@@ -37,7 +37,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Set Keyboard layout
-exec always --no-startup-id /bin/setxkbmap -layout de -nodeadkeys
+exec --no-startup-id "setxkbmap -layout de -nodeadkeys"
 
 # Application keybindings
 bindsym $mod+b exec firefox

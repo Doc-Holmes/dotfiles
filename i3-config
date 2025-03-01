@@ -36,12 +36,16 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# Start flameshot daemon
+exec --no-startup-id flameshot
+
 # Set Keyboard layout
 exec --no-startup-id "setxkbmap -layout de -nodeadkeys"
 
 # Application keybindings
 bindsym $mod+b exec firefox
 bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+p exec "flameshot gui"
 
 
 # Set background color
@@ -50,6 +54,9 @@ exec "xsetroot -solid '#800813'"
 
 # Set binding for lockscreen
 bindsym $mod+Mod1+l exec "i3lock --color 493779"
+
+# Configure gaps
+gaps inner 5px
 
 # Set bindings for scratchpad
 # Make the currently focused window a scratchpad

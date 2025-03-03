@@ -40,7 +40,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id flameshot
 
 # Set Keyboard layout
-exec --no-startup-id "setxkbmap -layout de -nodeadkeys"
+exec --no-startup-id "setxkbmap -layout de -variant nodeadkeys"
 
 # Application keybindings
 bindsym $mod+b exec firefox

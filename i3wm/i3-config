@@ -48,6 +48,7 @@ bindsym $mod+Shift+p exec "spectacle -r"
 # Set background color
 #exec "xsetroot -solid '#333333'"
 exec "xsetroot -solid '#800813'"
+exec_always --no-startup-id "feh --bg-fill ~/Pictures/Wallpapers/SpaceTarantula.png"
 
 # Set binding for lockscreen
 bindsym $mod+Mod1+l exec "i3lock --color 493779"

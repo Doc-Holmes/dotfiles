@@ -38,7 +38,8 @@ input * {
   xkb_variant nodeadkeys
 }
 input "18003:1:foostan_Corne" {
-  xkb_layout us,at
+  xkb_layout us
+  xkb_variant qwerty
 }
 
 input type:touchpad {

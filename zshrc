@@ -108,6 +108,7 @@ alias teams="nix-shell -p teams-for-linux --command teams-for-linux"
 alias chuck="curl -s https://api.chucknorris.io/jokes/random | jq '.value'"
 alias setkb="setxkbmap -layout de -variant nodeadkeys"
 alias setkbus="setxkbmap -layout us"
+alias setuphome="xrandr --output DP-3 --rotate left --pos 0x0 --output DP-4 --pos 1080x550 --output eDP-1 --pos 3000x550"
 
 eval "$(zoxide init zsh)"
 

@@ -107,6 +107,7 @@ alias parrot="curl parrot.live"
 alias teams="nix-shell -p teams-for-linux --command teams-for-linux"
 alias chuck="curl -s https://api.chucknorris.io/jokes/random | jq '.value'"
 alias setkb="setxkbmap -layout de -variant nodeadkeys"
+alias setkbus="setxkbmap -layout us"
 
 eval "$(zoxide init zsh)"
 

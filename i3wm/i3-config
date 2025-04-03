@@ -73,6 +73,7 @@ bindsym $mod+minus scratchpad show
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
+<<<<<<< Updated upstream
 bindsym XF86AudioRaiseVolume    exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume    exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute           exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
@@ -80,6 +81,8 @@ bindsym XF86AudioMicMute        exec --no-startup-id pactl set-source-mute @DEFA
 bindsym XF86AudioPlay           exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext           exec --no-startup-id playerctl next
 bindsym XF86AudioPrev           exec --no-startup-id playerctl previous
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -160,7 +163,7 @@ for_window [window_type="menu"]                 floating enable
 
 # Set some specific programs floating by default
 for_window [title="Volume Control"]             floating enable  # pavucontrol
-for_window [title="Network Connections"]             floating enable  # nm-connections-editor
+for_window [title="Network Connections"]        floating enable  # nm-connections-editor
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.

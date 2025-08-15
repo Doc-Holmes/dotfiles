@@ -14,7 +14,8 @@ set $term konsole
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | wmenu | xargs swaymsg exec --
+#set $menu dmenu_path | wmenu | xargs swaymsg exec --
+set $menu fuzzel
 
 ### Output configuration
 #
@@ -96,7 +97,7 @@ input type:pointer {
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Shutdown' 'shutdown now' -B 'Yes, exit sway' 'swaymsg exit'
     
     # Switch keyboard layout
     bindsym Ctrl+Shift+l input type:keyboard xkb_switch_layout next

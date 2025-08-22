@@ -4,24 +4,31 @@
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+
 # Home row direction keys, like vim
-set $left h
-set $down j
-set $up k
+set $left  h
+set $down  j
+set $up    k
 set $right l
+
 # Your preferred terminal emulator
 set $term konsole
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 #set $menu dmenu_path | wmenu | xargs swaymsg exec --
 set $menu fuzzel
 
+# Background images
+set $main-bg /home/manoel/Pictures/Wallpaper/Moon.jpg
+set $vertical-bg /home/manoel/Pictures/Wallpaper/52338757819_64ea711ed5_k.jpg
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output HDMI-A-1 bg /home/manoel/Pictures/Wallpaper/Moon.jpg fill
-output DP-3 bg /home/manoel/Pictures/Wallpaper/52338757819_64ea711ed5_k.jpg fill
+output HDMI-A-1 bg $main-bg fill
+output DP-3 bg $vertical-bg fill
 #
 # Example configuration:
 #
